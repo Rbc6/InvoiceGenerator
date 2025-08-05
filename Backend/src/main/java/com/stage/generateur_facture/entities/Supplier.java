@@ -1,9 +1,6 @@
 package com.stage.generateur_facture.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -19,9 +16,9 @@ public class Supplier {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
-    private String supp_name;
+    @Column(nullable = false)
+    private String suppname;
     private String address;
-    private String supp_num;
+    private String suppnum;
 
 }

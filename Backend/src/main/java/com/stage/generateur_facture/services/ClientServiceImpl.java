@@ -52,4 +52,10 @@ public class ClientServiceImpl implements IClientService {
     public List<Client> searchClients(String name) {
         return clientRepository.findByFullNameContainingIgnoreCase(name);
     }
+
+    @Override
+    public Optional<Client> findByEmail(String email) {
+        return clientRepository.findByEmail(email);
+    }
+
 }

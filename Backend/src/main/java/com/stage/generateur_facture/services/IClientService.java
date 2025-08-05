@@ -11,11 +11,13 @@ public interface IClientService {
 
     Optional<Client> getClientById(Long id) ;
 
-    Client createClient(Client medecin);
+    Client createClient(Client client);
 
-    Client updateClient(Long id, Client medecin);
+    Client updateClient(Long id, Client client);
 
     void deleteClient(Long id) ;
     List<Client> searchClients(String name);
+    Optional<Client> findByEmail(String email);
+
 }
 
