@@ -1,4 +1,4 @@
-package com.stage.generateur_facture.services;
+package com.stage.generateur_facture.services.Supplier;
 
 import com.stage.generateur_facture.entities.Supplier;
 import com.stage.generateur_facture.repositories.SupplierRepository;

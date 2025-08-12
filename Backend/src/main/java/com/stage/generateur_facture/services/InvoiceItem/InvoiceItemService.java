@@ -1,7 +1,6 @@
-package com.stage.generateur_facture.services;
+package com.stage.generateur_facture.services.InvoiceItem;
 
 import com.stage.generateur_facture.entities.InvoiceItem;
-import com.stage.generateur_facture.entities.Supplier;
 import com.stage.generateur_facture.repositories.InvoiceItemRepository;
 
 import java.util.List;

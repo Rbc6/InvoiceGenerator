@@ -1,4 +1,4 @@
-package com.stage.generateur_facture.services;
+package com.stage.generateur_facture.services.Client;
 
 import com.stage.generateur_facture.entities.Client;
 

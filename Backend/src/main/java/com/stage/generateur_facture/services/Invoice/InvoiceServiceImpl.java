@@ -1,4 +1,4 @@
-package com.stage.generateur_facture.services;
+package com.stage.generateur_facture.services.Invoice;
 
 import com.stage.generateur_facture.entities.Client;
 import com.stage.generateur_facture.entities.Invoice;
@@ -8,6 +8,8 @@ import com.stage.generateur_facture.entities.dto.InvoiceRequest;
 import com.stage.generateur_facture.entities.enums.InvoiceStatus;
 import com.stage.generateur_facture.repositories.InvoiceItemRepository;
 import com.stage.generateur_facture.repositories.InvoiceRepository;
+import com.stage.generateur_facture.services.Client.ClientServiceImpl;
+import com.stage.generateur_facture.services.Supplier.SupplierServiceImpl;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -58,13 +60,13 @@ public class InvoiceServiceImpl implements IInvoiceService {
         invoice.setTitle(request.getTitle());
         invoice.setClient(client);
         invoice.setSupplier(supplier);
-        invoice.setDate(request.getInvoiceDate());
-        invoice.setTotal(BigDecimal.valueOf(request.getTotalAmount()));
+        invoice.setDate(request.getDate());
+        invoice.setTotal(request.getTotal());
         invoice.setStatus(InvoiceStatus.PENDING);
         invoice = invoiceRepository.save(invoice);
 
         List<InvoiceItem> savedItems = new ArrayList<>();
-        for (InvoiceItem item : request.getItems()) {
+        for (InvoiceItem item : request.getInvoiceItems()) {
             item.setInvoice(invoice);
             InvoiceItem savedItem = invoiceItemRepository.save(item);
             savedItems.add(savedItem);

@@ -1,7 +1,7 @@
 package com.stage.generateur_facture.controllers;
 
 import com.stage.generateur_facture.entities.Client;
-import com.stage.generateur_facture.services.IClientService;
+import com.stage.generateur_facture.services.Client.IClientService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

@@ -2,7 +2,7 @@ package com.stage.generateur_facture.controllers;
 
 import com.stage.generateur_facture.entities.Invoice;
 import com.stage.generateur_facture.entities.dto.InvoiceRequest;
-import com.stage.generateur_facture.services.IInvoiceService;
+import com.stage.generateur_facture.services.Invoice.IInvoiceService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
